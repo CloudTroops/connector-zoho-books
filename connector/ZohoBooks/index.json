@@ -3,7 +3,11 @@
   "description": "Connector to Zoho Books Accounting Software",
   "triggers": [],
   "actions": [
-    "/v1/listinvoices"
+    "/v1/listinvoices",
+    "/v1/getinvoice",
+    "/v1/createinvoice",
+    "/v1/deleteinvoice",
+    "/v1/updateinvoice"
   ],
   "version": 1,
   "auth_type": "oauth",

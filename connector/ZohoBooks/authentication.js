@@ -1,7 +1,7 @@
 module.exports = {
   label: "Connect to ZohoBooks",
   mock_input: {
-    access_token: "1000.437e60011252e8977e838b6d18a799b8.9202cfe36f83c070bf88821ed9f3bdd2"
+    access_token: "1000.66b786eebafe05bc3568512403b4c3ea.cc6ca8b9c045f030ee2e97cf5035ee75"
   },
   oauth: "zohobooks_0a5b9c53df",
   validate: function (input, output) {
