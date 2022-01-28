@@ -1,0 +1,9 @@
+{
+  "name": "zohobooks",
+  "version": "1.0.0",
+  "description": "Connector to Zoho Books Accounting Software",
+  "dependencies": {
+    "request": "2.55.0",
+    "@webmethodsio/cli-sdk": "*"
+  }
+}

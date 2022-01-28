@@ -1,0 +1,15 @@
+{
+  "name": "Zoho Books",
+  "description": "Connector to Zoho Books Accounting Software",
+  "triggers": [],
+  "actions": [
+    "/v1/listinvoices"
+  ],
+  "version": 1,
+  "auth_type": "oauth",
+  "doc_link": "http://docs.example.com",
+  "oauth_provider": "zohobooks_0a5b9c53df",
+  "oauthStatus": "deployed",
+  "appId": "524e9ceb-7a2c-497c-bce5-82445cae53d9",
+  "guid": "e3b0a5bb-5437-4c9f-97ff-16a6b33ff0a1"
+}
