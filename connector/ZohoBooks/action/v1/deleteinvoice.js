@@ -41,7 +41,6 @@ module.exports = {
 
     const base = 'https://books.zoho.com/api/v3/invoices';
     const finalUrl = `${base}/${input.invoice_id}?organization_id=${input.organization_id}`;
-    $log(`URL=${finalUrl}`);
     
     request({
       url: finalUrl,
@@ -51,13 +50,18 @@ module.exports = {
         "Accept": "application/json"
       }
     }, 
-      (err, res, body) => {
-        $log(err);
-        $log(`Status=${res.statusCode}`);
-      if(err){
-        output({error: err});
-      }else{
-        output(null, JSON.parse(body));
+    (err, res, body) => {
+      if (err) {
+        return output(err);
+      } else {
+        if (res.statusCode >= 200 && res.statusCode < 400) {
+          if (typeof (body) == 'string')
+            return output(null, JSON.parse(body));
+          else
+            return output(null, body);
+        } else {
+          return output(JSON.parse(body));
+        }
       }
     });
   }

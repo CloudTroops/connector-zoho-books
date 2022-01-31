@@ -4,6 +4,7 @@ module.exports = {
     access_token: "1000.66b786eebafe05bc3568512403b4c3ea.cc6ca8b9c045f030ee2e97cf5035ee75"
   },
   oauth: "zohobooks_0a5b9c53df",
+  
   validate: function (input, output) {
     // auth credentials will be available in input.auth.access_token
     // callback pattern

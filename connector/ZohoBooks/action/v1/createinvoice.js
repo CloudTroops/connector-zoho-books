@@ -155,14 +155,20 @@ module.exports = {
       },
       json: input.invoice
     },
-      (err, res, body) => {
-
-        if (err) {
-          output({ error: err });
+    (err, res, body) => {
+      if (err) {
+        return output(err);
+      } else {
+        if (res.statusCode >= 200 && res.statusCode < 400) {
+          if (typeof (body) == 'string')
+            return output(null, JSON.parse(body));
+          else
+            return output(null, body);
         } else {
-          output(null, JSON.parse(body));
+          return output(JSON.parse(body));
         }
-      });
+      }
+    });
   }
 
 }

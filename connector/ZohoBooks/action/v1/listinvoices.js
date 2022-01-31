@@ -191,9 +191,16 @@ module.exports = {
     },
       (err, res, body) => {
         if (err) {
-          output({ error: err });
+          return output(err);
         } else {
-          output(null, JSON.parse(body));
+          if (res.statusCode >= 200 && res.statusCode < 400) {
+            if (typeof (body) == 'string')
+              return output(null, JSON.parse(body));
+            else
+              return output(null, body);
+          } else {
+            return output(JSON.parse(body));
+          }
         }
       });
   }
