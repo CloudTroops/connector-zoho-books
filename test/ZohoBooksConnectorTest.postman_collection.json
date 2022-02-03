@@ -1,0 +1,131 @@
+{
+	"info": {
+		"_postman_id": "04d8b4bf-2c44-4bda-ae5f-12aa1f08f10e",
+		"name": "ZohoBooksConnectorTest",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "List All Invoices",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "webhook_key",
+						"value": "6ef20150dc42fba7f94ab4731643876421980",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://wmioconnectorsdev.int-az-us.webmethods.io/runflow/run/sync/i66TFtvjK",
+					"protocol": "https",
+					"host": [
+						"wmioconnectorsdev",
+						"int-az-us",
+						"webmethods",
+						"io"
+					],
+					"path": [
+						"runflow",
+						"run",
+						"sync",
+						"i66TFtvjK"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Invoice",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "webhook_key",
+						"value": "a49687ced4ae4518297054b01643887207358",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"invoice\": {\r\n        \"invoice_number\": \"INV-000007\",\r\n        \"customer_id\": \"787551000000014051\",\r\n        \"date\": \"2022-02-06\",\r\n        \"due_date\": \"2022-02-22\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://wmioconnectorsdev.int-az-us.webmethods.io/runflow/run/sync/RGu6wgAf2",
+					"protocol": "https",
+					"host": [
+						"wmioconnectorsdev",
+						"int-az-us",
+						"webmethods",
+						"io"
+					],
+					"path": [
+						"runflow",
+						"run",
+						"sync",
+						"RGu6wgAf2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Invoice",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "webhook_key",
+						"value": "5a09eee66ebe8813b9a458bd1643897138672",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"invoice\": {\r\n        \"invoice_id\": \"787551000000029064\",\r\n        \"balance\": 0\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://wmioconnectorsdev.int-az-us.webmethods.io/runflow/run/sync/qcIKr62Hy",
+					"protocol": "https",
+					"host": [
+						"wmioconnectorsdev",
+						"int-az-us",
+						"webmethods",
+						"io"
+					],
+					"path": [
+						"runflow",
+						"run",
+						"sync",
+						"qcIKr62Hy"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Invoice",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		}
+	]
+}
